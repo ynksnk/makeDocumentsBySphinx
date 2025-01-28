@@ -1,0 +1,18 @@
+h1{
+	color: #2980B9; /* 文字の色 */
+	padding: 0em 0em; /* 上下の余白 */
+	border-top: solid 5px #2980B9; /* 上線 */
+	border-bottom: solid 5px #2980B9; /* 下線 */
+}
+
+h2{
+	color: #494949; /* 文字の色 */
+	padding: 0.4em 0.5em; /* 文字の上下 左右の余白 */
+	background: #f4f4f4; /* 背景色 */
+	border-left: solid 5px #2980B9; /*左線 */
+	border-bottom: solid 5px #d7d7d7; /* 下線 */
+}
+
+h3{
+	border-bottom: solid 3px #2980B9; /* 線の種類（実線） 太さ 色 */
+}
