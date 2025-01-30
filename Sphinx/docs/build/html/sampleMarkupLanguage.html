@@ -48,10 +48,15 @@
 <li class="toctree-l1"><a class="reference internal" href="samplePython.html">samplePython module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">軽量マークアップ言語（マークダウン言語）の記述例</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">1. 概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">2. コマンド例</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#h1-h3">2.1　見出し（H1～H3）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">2.2　リスト</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">2.3　図や動画の挿入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2. 記述における基本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3. コマンド例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#h1-h3">3.1　見出し（H1～H3）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.2　リスト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3.3　図や動画の挿入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">3.4　コード（ブロック）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">3.5　コード（文章中）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">3.6　太字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">3.7　空行（非標準）</a></li>
 </ul>
 </li>
 </ul>
@@ -86,8 +91,8 @@
 <h1>軽量マークアップ言語（マークダウン言語）の記述例<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
 <section id="id2">
 <h2>1. 概要<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<p>　本ページでは，軽量マークアップ言語における記述例を示す．記述結果を本ページで示すと共に，その具体的な記述の仕方は，本ページの生成元である &quot;sampleMarkupLanguage.rst&quot; を参照されたし．
-　以下に，ディレクトリの概況を示す．</p>
+<p>　本ページでは，軽量マークアップ言語における記述例を示す．記述結果を本ページで示すと共に，その具体的な記述の仕方は，本ページの生成元である &quot;sampleMarkupLanguage.rst&quot; を参照されたし．</p>
+<p>　以下に，ディレクトリの概況を示す．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Sphinx
 ├─ docs
 │　├─ build
@@ -104,22 +109,40 @@
 </div>
 </section>
 <section id="id3">
-<h2>2. コマンド例<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
-<section id="h1-h3">
-<h3>2.1　見出し（H1～H3）<a class="headerlink" href="#h1-h3" title="Link to this heading"></a></h3>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><strong>見出しH1</strong></p>
-<p><strong>見出しH2</strong></p>
-<p><strong>見出しH3</strong></p>
+<h2>2. 記述における基本<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>　軽量マークアップ言語は，改行／空行やインデントが記述結果に影響を及ぼす．そのため，本ページの生成元である&quot;sampleMarkupLanguage.rst&quot; を参照する際は，各記述における記号の扱いだけでなく，改行／空行やインデントにも注意を払って参照されたし．</p>
+<p>　例えば平文において改行したい場合，生成元の.rstファイルにおいては一行改行するだけでなく，さらに一行分の空行を加える必要がある．</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="id4">
-<h3>2.2　リスト<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<h2>3. コマンド例<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<section id="h1-h3">
+<h3>3.1　見出し（H1～H3）<a class="headerlink" href="#h1-h3" title="Link to this heading"></a></h3>
+<p>　本Webページにて，「軽量マークアップ言語（マークダウン言語）の記述例」に当たる部分がH1，「3．コマンド例」に当たる部分がH2，「3.1　見出し（H1～H3）」にあたる部分がH3である．</p>
+<p>　H1～H3は，対象文字列の上や下を <code class="docutils literal notranslate"><span class="pre">=</span></code> （イコール）や  <code class="docutils literal notranslate"><span class="pre">-</span></code> （ハイフン）で挟むように記述する．この際，イコールやハイフンの長さ（個数）は、対象文字列と同じだけ記述する必要がある．ドキュメント編集中は、エディタにて改行マークが表示されるようにしておくと，対象文字列とイコールやハイフンとの改行位置がちょうど揃うように目視しながら長さの調整ができ，編集が容易になる．</p>
+<p>　4個以上であれば対象文字列より長さが短くとも見出しとして認識される．しかし，コマンドプロンプト上でコマンド <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 実行時に，イコールやハイフンの長さが対象文字列に対し短いという旨の警告文が発生する．</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id5">
+<h3>3.2　リスト<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <ul>
+<li><p>リスト インデント大</p>
+<blockquote>
+<div><ul>
+<li><p>リスト インデント中</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>リスト インデント小</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
 <li><p>リスト インデント大</p>
 <blockquote>
 <div><ul>
@@ -138,28 +161,72 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="id5">
-<h3>2.3　図や動画の挿入<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<section id="id6">
+<h3>3.3　図や動画の挿入<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
 <p>　imageを用いた図の挿入例</p>
 <img alt="_images/%E5%9B%B3%E3%81%AE%E6%8C%BF%E5%85%A5%E4%BE%8B.jpg" src="_images/%E5%9B%B3%E3%81%AE%E6%8C%BF%E5%85%A5%E4%BE%8B.jpg" />
 <p>　figureを用いた図の挿入例</p>
-<figure class="align-center" id="id6">
+<figure class="align-center" id="id11">
 <a class="reference internal image-reference" href="_images/図の挿入例.jpg"><img alt="図　figureを用いて図を挿入した様子" src="_images/%E5%9B%B3%E3%81%AE%E6%8C%BF%E5%85%A5%E4%BE%8B.jpg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">図　figureを用いて図を挿入した様子</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-text">図　figureを用いて図を挿入した様子</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>　figureを用いた動画の挿入例</p>
-<figure class="align-center" id="id7">
+<figure class="align-center" id="id12">
 <a class="reference internal image-reference" href="_images/動画の挿入例.mp4"><video src="_images/%E5%8B%95%E7%94%BB%E3%81%AE%E6%8C%BF%E5%85%A5%E4%BE%8B.mp4" style="width: 100%;" title="動画　figureを用いて動画を挿入した様子">
 <a href="_images/%E5%8B%95%E7%94%BB%E3%81%AE%E6%8C%BF%E5%85%A5%E4%BE%8B.mp4">動画　figureを用いて動画を挿入した様子</a>
 </video>
 </a>
 <figcaption>
-<p><span class="caption-text">動画　figureを用いて動画を挿入した様子</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+<p><span class="caption-text">動画　figureを用いて動画を挿入した様子</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id7">
+<h3>3.4　コード（ブロック）<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hogehoge</span>
+<span class="n">hogehoge</span>
+<span class="n">hogehoge</span>
+<span class="n">hogehoge</span>
+</pre></div>
+</div>
+<p>　上記のように，コード用のブロックを設け表記したい場合は，まず <code class="docutils literal notranslate"><span class="pre">:</span></code> （コロン）を2つ記述する．その後に空行を1つ加えた後，インデントを1つ下げコードを記述する．コード部分の後には再び空行を1つ加える．つまり，インデントを下げたコード部分に対し，その前後を空行で挟んでいる状態である．</p>
+<p>　コード部分の文字列が，画面の表示領域よりも長い場合は，自動的にスクロールバーが設けられる．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">コード部分が長文であったときの例</span>　<span class="n">コード部分が長文であったときの例</span>　<span class="n">コード部分が長文であったときの例</span>　<span class="n">コード部分が長文であったときの例</span>　<span class="n">コード部分が長文であったときの例</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id8">
+<h3>3.5　コード（文章中）<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<p>　<code class="docutils literal notranslate"><span class="pre">hogehoge</span></code></p>
+<p>　上記のように，平文ではなくコードとして表記したい場合は，対象文字列の前後を2つのグレーブアクセント（Unicode：U+0060）で挟む．前後に他の文字列がある場合は，他の文字列との間に半角スペースを加える必要がある．直後が改行である場合は，直後の半角スペースは不要である．</p>
+<p>　グレーブアクセントと似ているアポストロフィ（Unicode：U+0027）や，クォーテーションマーク（Unicode：U+0022）と間違えないよう注意されたし．キーボードによるグレーブアクセントを入力は，JIS日本語配列のキーボードの場合，&quot;＠&quot; キーを &quot;Shift&quot; キーと共に入力すると，グレーブアクセントを入力できる． &quot;7&quot; キーと &quot;Shift&quot; キーとで入力できるのはアポストロティであるため，間違えないよう注意されたし．</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id9">
+<h3>3.6　太字<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<p><strong>太字での記述</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id10">
+<h3>3.7　空行（非標準）<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>　平文において段落を区切りたい場合は，.rstファイル上にて対象段落間に空行を挟むことで実現できる．</p>
+<p>　これに対し，この文章間の段落の間隔と区別して，章末などに空行のような空間を設けたい場合に，筆者は <code class="docutils literal notranslate"><span class="pre">|</span></code> （バーティカルライン）を用いている．バーティカルラインの標準的な使途は，テーブルのセルの区切りであったり，予約語に対するエスケープである（おそらく）．そのため，ここで紹介したバーティカルラインの使途は，非標準の使途である．</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
 </section>
 </section>

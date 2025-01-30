@@ -7,6 +7,10 @@ docstiling形式のコメント記述に関する，サンプルプログラム
 2025.1.19　YANAKA Shunsuke
 """
 
+# ライブラリ（importの記法に対するトラブルシューティング例として記載）
+import pandas as pd
+# from pycaret.regression import # ワイルドカードを用いた非推奨の記法．SPhinxにおいては警告（エラー）を引き起こす
+from pycaret.regression import setup, compare_models, create_model, tune_model, finalize_model, save_model, plot_model, predict_model # ワイルドカードを用いずに用いる関数等を全て列挙する記法
 
 class sampleClass:
     """クラスsampleClassの概要

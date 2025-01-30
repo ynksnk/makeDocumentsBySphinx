@@ -23,7 +23,7 @@ exclude_patterns = []
 language = "ja"
 
 # Pythonコード内のimport文が原因で，Sphinxによるドキュメント出力にWARNINGとなった場合，対象ライブラリをモックとして扱い回避する
-autodic_mock_imports = [
+autodoc_mock_imports = [
     "pandas",
     "pycaret"
 ]
