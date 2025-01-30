@@ -5,4 +5,4 @@
  
 　詳細は下記Webサイトで説明しています．
  
- 　＞https://word-in-the-world.com/2023/03/09/processing-textbox/
+ 　＞https://word-in-the-world.com/2025/01/31/docstring/
